@@ -195,6 +195,3 @@ A integração entre Fila, Pilha, Lista Ligada e Árvore Binária tornou o siste
 </p>
 <br/><br/>
 <p>
-
----
-# Simulador-de-Gerenciamento-de-Chamados
