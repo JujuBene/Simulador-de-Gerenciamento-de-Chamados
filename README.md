@@ -29,6 +29,7 @@ Projeto desenvolvido para simular um sistema de suporte técnico capaz de cadast
 <b>Desenvolvimento do sistema</b>
 
 O projeto foi desenvolvido para representar um ambiente real de suporte técnico corporativo, permitindo controlar todo o ciclo de vida de um chamado, desde sua abertura até sua conclusão.
+
 Cada chamado possui:
 - ID único
 - Nome do usuário
@@ -41,14 +42,18 @@ Cada chamado possui:
 <b>Aplicação das Estruturas de Dados</b>
 
 📋 Fila (Queue)
+
 Utilizada para organizar os chamados aguardando atendimento.
+
 Funcionamento:
 - O primeiro chamado aberto será o primeiro atendido.
 - Segue o conceito FIFO (First In, First Out).
 
 
 📚 Pilha (Stack)
+
 Utilizada para armazenar o histórico dos chamados atendidos.
+
 Funcionamento:
 - Após o atendimento, o chamado é removido da fila.
 - O registro é armazenado na pilha.
@@ -56,7 +61,9 @@ Funcionamento:
 
 
 🔗 Lista Ligada (Linked List)
+
 Utilizada para armazenar usuários e chamados cadastrados.
+
 Benefícios:
 - Crescimento dinâmico
 - Inserções eficientes
@@ -64,7 +71,9 @@ Benefícios:
 
 
 🌳 Árvore Binária
+
 Utilizada para busca rápida de chamados através do ID.
+
 Benefícios:
 - Pesquisa eficiente
 - Organização hierárquica dos dados
