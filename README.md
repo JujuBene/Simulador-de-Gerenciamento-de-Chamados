@@ -50,6 +50,9 @@ Funcionamento:
 - Segue o conceito FIFO (First In, First Out).
 
 
+
+
+
 📚 Pilha (Stack)
 
 Utilizada para armazenar o histórico dos chamados atendidos.
@@ -60,6 +63,9 @@ Funcionamento:
 - Segue o conceito LIFO (Last In, First Out).
 
 
+
+
+
 🔗 Lista Ligada (Linked List)
 
 Utilizada para armazenar usuários e chamados cadastrados.
@@ -68,6 +74,9 @@ Benefícios:
 - Crescimento dinâmico
 - Inserções eficientes
 - Melhor organização dos registros
+
+
+
 
 
 🌳 Árvore Binária
@@ -117,9 +126,13 @@ Controle e organização das solicitações registradas.
 ## 🔄 Fluxo de execução
 
 1️⃣ Cadastro do usuário → Lista Ligada
+
 2️⃣ Abertura do chamado → Fila + Árvore Binária
+
 3️⃣ Atendimento do chamado → Remoção da Fila
+
 4️⃣ Encerramento → Registro na Pilha
+
 5️⃣ Consulta → Busca pela Árvore Binária
 
 
