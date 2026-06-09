@@ -6,111 +6,118 @@
 
 </p>
 
-# Projeto Analisador Léxico
+# Simulador de Suporte Técnico de Informática
 
 
- > ℹ️ **NOTE:** Este documento foi estruturado a partir do projeto de implementação do Analisador Léxico, desenvolvido na disciplina de Teoria da Computação / Linguagens Formais e Autômatos, com foco no reconhecimento e processamento de tokens através de regras léxicas.
+ > ℹ️ **NOTE:** Este documento foi estruturado a partir do projeto “Simulador de Suporte Técnico de Informática”, desenvolvido na disciplina de Estruturas de Dados e Análise de Algoritmos, com o objetivo de aplicar na prática diferentes estruturas de dados em um cenário corporativo de gerenciamento de chamados.
 
-Projeto desenvolvido com o objetivo de simular o funcionamento de um Analisador Léxico, responsável por transformar códigos fonte em sequências de tokens compreensíveis para as próximas etapas de um compilador ou interpretador.
+Projeto desenvolvido para simular um sistema de suporte técnico capaz de cadastrar usuários, registrar chamados, organizar atendimentos e armazenar históricos, utilizando Fila, Pilha, Lista Ligada e Árvore Binária de forma integrada.
 
 ## 💻 Tecnologias utilizadas no projeto
 
-- Python
-- Tkinter
-- Expressões Regulares
-- Conceitos de Compiladores
-- Autômatos Finitos Determinísticos (DFA)
-- Lógica de programação estruturada
+- Java
+- Java Swing
+- Estruturas de Dados
+- Programação Orientada a Objetos (POO)
+- JTable
+- JFrame
+- JOptionPane
 
 
 ## ✨ Como foi feito ?
 
-<b>Desenvolvimento do analisador</b>
+<b>Desenvolvimento do sistema</b>
 
-O sistema foi desenvolvido para realizar a leitura de um código fonte e identificar elementos léxicos da linguagem.
-O analisador reconhece:
-- Palavras-chave
-- Identificadores
-- Números
-- Operadores
-- Símbolos especiais
-- Espaços e quebras de linha
-
-
-
-<b>Tokenização</b>
-
-O projeto transforma o texto digitado pelo usuário em uma sequência organizada de tokens, permitindo que cada elemento seja categorizado corretamente.
-
-Exemplos de tokens identificados:
-- if
-- while
-- return
-- variáveis
-- números inteiros
-- operadores matemáticos
+O projeto foi desenvolvido para representar um ambiente real de suporte técnico corporativo, permitindo controlar todo o ciclo de vida de um chamado, desde sua abertura até sua conclusão.
+Cada chamado possui:
+- ID único
+- Nome do usuário
+- Descrição do problema
+- Categoria
+- Prioridade
 
 
 
-<b>Uso de Expressões Regulares</b>
+<b>Aplicação das Estruturas de Dados</b>
 
-Foram utilizadas expressões regulares para definição dos padrões léxicos.
-
-Exemplos:
-- Identificadores → [a-zA-Z_][a-zA-Z0-9_]*
-- Números → \d+
-- Operadores → + - * /
-
+📋 Fila (Queue)
+Utilizada para organizar os chamados aguardando atendimento.
+Funcionamento:
+- O primeiro chamado aberto será o primeiro atendido.
+- Segue o conceito FIFO (First In, First Out).
 
 
-<b>Interface gráfica</b>
-
-O projeto conta com uma interface gráfica desenvolvida para facilitar a visualização da análise léxica.
-
-A interface permite:
-- Inserção de código fonte
-- Execução da análise
-- Exibição dos tokens reconhecidos
-- Feedback visual dos resultados
+📚 Pilha (Stack)
+Utilizada para armazenar o histórico dos chamados atendidos.
+Funcionamento:
+- Após o atendimento, o chamado é removido da fila.
+- O registro é armazenado na pilha.
+- Segue o conceito LIFO (Last In, First Out).
 
 
-<b>Estrutura do sistema</b>
+🔗 Lista Ligada (Linked List)
+Utilizada para armazenar usuários e chamados cadastrados.
+Benefícios:
+- Crescimento dinâmico
+- Inserções eficientes
+- Melhor organização dos registros
 
-O projeto foi dividido em módulos responsáveis por:
-- Lógica do analisador léxico
-- Interface gráfica
-- Processamento dos tokens
-- Organização da saída
+
+🌳 Árvore Binária
+Utilizada para busca rápida de chamados através do ID.
+Benefícios:
+- Pesquisa eficiente
+- Organização hierárquica dos dados
+- Melhor desempenho em consultas
+
+
+
+<b>Interface Gráfica</b>
+
+A aplicação possui uma interface desenvolvida em Java Swing para facilitar a interação do usuário.
+Componentes utilizados:
+- JFrame
+- JTable
+- JButton
+- JOptionPane
+
+A interface permite visualizar:
+- Usuários cadastrados
+- Chamados em aberto
+- Prioridades
+- Histórico de atendimentos
+- Resultados de buscas
 
 
 ## 🛠️ Instruções de execução
 
-- 🤖 1. Inicialização do sistema
-Execute o arquivo principal do analisador léxico.
-- 🤖 2. Inserção do código
-Digite ou cole um trecho de código fonte na área de entrada.
-- 🤖 3. Execução da análise
-Clique no botão de análise para iniciar o processamento léxico.
-- 🤖 4. Reconhecimento dos tokens
-O sistema identificará automaticamente os padrões encontrados.
-- 🤖 5. Exibição dos resultados
-Os tokens serão exibidos com suas respectivas classificações.
+- 🤖 1. Cadastro de Usuários
+Permite registrar novos usuários no sistema.
+- 🤖 2. Abertura de Chamados
+Criação de solicitações de suporte técnico.
+- 🤖 3. Atendimento de Chamados
+Processamento dos chamados seguindo a ordem da fila.
+- 🤖 4. Consulta de Histórico
+Visualização dos chamados já concluídos.
+- 🤖 5. Busca por Código
+Localização rápida de chamados através da árvore binária.
+- 🤖 6. Gerenciamento de Prioridades
+Controle e organização das solicitações registradas.
 
 
-## 🔄 Funcionalidades do projeto
-- Reconhecimento de tokens
-- Separação léxica do código
-- Identificação de palavras-chave
-- Validação de identificadores
-- Interface gráfica interativa
-- Processamento automatizado
+## 🔄 Fluxo de execução
+
+1️⃣ Cadastro do usuário → Lista Ligada
+2️⃣ Abertura do chamado → Fila + Árvore Binária
+3️⃣ Atendimento do chamado → Remoção da Fila
+4️⃣ Encerramento → Registro na Pilha
+5️⃣ Consulta → Busca pela Árvore Binária
 
 
 ## 📌 Considerações finais
 
-Este projeto permitiu aplicar na prática os conceitos estudados sobre análise léxica e construção de compiladores. A implementação demonstrou como um analisador léxico interpreta códigos fonte e os transforma em estruturas organizadas para processamento computacional.
-Além do aprendizado teórico, o desenvolvimento reforçou conhecimentos em lógica, expressões regulares, automatos e desenvolvimento de interfaces gráficas.
-
+Este projeto permitiu aplicar de forma prática os conceitos fundamentais de Estruturas de Dados e Análise de Algoritmos, demonstrando como diferentes estruturas podem trabalhar em conjunto para solucionar problemas reais.
+A integração entre Fila, Pilha, Lista Ligada e Árvore Binária tornou o sistema eficiente, organizado e alinhado às necessidades de um ambiente de suporte técnico, proporcionando uma experiência completa de gerenciamento de chamados.
 
 ## 👨‍💻 Expert
 
